@@ -5,16 +5,18 @@
   //
   // Asset helpers should handle versioning themselves, so the "?v="
   // querystring is only necessary when NOT using an asset helper
-  // 
+  //
   /* mdi-sass-asset-helper is: #{$mdi-sass-asset-helper} */
-  /* mdi-font-path-helper({$mdi-font-path}/{$mdi-filename}-webfont.eot') is #{mdi-font-path-helper('#{$mdi-font-path}/#{$mdi-filename}-webfont.eot')} */
-  /* mdi-font-path-helper('fonts/{$mdi-filename}-webfont.eot') is #{mdi-font-path-helper('fonts/#{$mdi-filename}-webfont.eot')} */
-  src: url(if($mdi-sass-asset-helper, mdi-font-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.eot'),        '#{$mdi-font-path}#{$mdi-filename}-webfont.eot?v=#{$mdi-version}'));
-  src: url(if($mdi-sass-asset-helper, mdi-font-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.eot?#iefix'), '#{$mdi-font-path}#{$mdi-filename}-webfont.eot?#iefix&v=#{$mdi-version}')) format('embedded-opentype'),
-       url(if($mdi-sass-asset-helper, mdi-font-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.woff2'),      '#{$mdi-font-path}#{$mdi-filename}-webfont.woff2?v=#{$mdi-version}'))      format('woff2'),
-       url(if($mdi-sass-asset-helper, mdi-font-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.woff'),       '#{$mdi-font-path}#{$mdi-filename}-webfont.woff?v=#{$mdi-version}'))       format('woff'),
-       url(if($mdi-sass-asset-helper, mdi-font-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.ttf'),        '#{$mdi-font-path}#{$mdi-filename}-webfont.ttf?v=#{$mdi-version}'))        format('truetype'),
-       url(if($mdi-sass-asset-helper, mdi-font-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.svg##{$mdi-filename}#{$mdi-font-weight}'), '#{$mdi-font-path}#{$mdi-filename}-webfont.svg?v=#{$mdi-version}##{$mdi-filename}#{$mdi-font-weight}')) format('svg');
+  /* mdi-asset-path-helper({$mdi-font-path}{$mdi-filename}-webfont.eot') is #{mdi-asset-path-helper('#{$mdi-font-path}#{$mdi-filename}-webfont.eot')} */
+  /* mdi-asset-path-helper({$mdi-font-path}/{$mdi-filename}-webfont.eot') is #{mdi-asset-path-helper('#{$mdi-font-path}/#{$mdi-filename}-webfont.eot')} */
+  /* mdi-asset-path-helper(mdi/{$mdi-font-path}{$mdi-filename}-webfont.eot') is #{mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.eot')} */
+  /* mdi-asset-path-helper('fonts/{$mdi-filename}-webfont.eot') is #{mdi-asset-path-helper('fonts/#{$mdi-filename}-webfont.eot')} */
+  src: url(if($mdi-sass-asset-helper, mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.eot'),        '#{$mdi-font-path}#{$mdi-filename}-webfont.eot?v=#{$mdi-version}'));
+  src: url(if($mdi-sass-asset-helper, mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.eot?#iefix'), '#{$mdi-font-path}#{$mdi-filename}-webfont.eot?#iefix&v=#{$mdi-version}')) format('embedded-opentype'),
+       url(if($mdi-sass-asset-helper, mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.woff2'),      '#{$mdi-font-path}#{$mdi-filename}-webfont.woff2?v=#{$mdi-version}'))      format('woff2'),
+       url(if($mdi-sass-asset-helper, mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.woff'),       '#{$mdi-font-path}#{$mdi-filename}-webfont.woff?v=#{$mdi-version}'))       format('woff'),
+       url(if($mdi-sass-asset-helper, mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.ttf'),        '#{$mdi-font-path}#{$mdi-filename}-webfont.ttf?v=#{$mdi-version}'))        format('truetype'),
+       url(if($mdi-sass-asset-helper, mdi-asset-path-helper('mdi/#{$mdi-font-path}#{$mdi-filename}-webfont.svg##{$mdi-filename}#{$mdi-font-weight}'), '#{$mdi-font-path}#{$mdi-filename}-webfont.svg?v=#{$mdi-version}##{$mdi-filename}#{$mdi-font-weight}')) format('svg');
   font-weight: normal;
   font-style: normal;
   color: banana;
