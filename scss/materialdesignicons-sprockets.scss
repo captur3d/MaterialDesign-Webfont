@@ -1,0 +1,6 @@
+@function mdi-font-path-helper($path) {
+  @return font-path($path);
+}
+
+$mdi-font-path: "fonts" !default;
+$mdi-sass-asset-helper: true;
